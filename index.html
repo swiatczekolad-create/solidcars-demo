@@ -55,6 +55,39 @@ nav.scrolled{background:rgba(11,25,41,.97);backdrop-filter:blur(12px);padding:.6
 .section-title{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(2rem,4vw,2.8rem);color:var(--navy);text-transform:uppercase;letter-spacing:1px;line-height:1.1;margin-bottom:.8rem}
 .section-desc{color:var(--gray-600);line-height:1.7;font-size:1.02rem}
 
+/* PILLARS - 3 core offerings */
+.pillars{padding:5rem 2rem 6rem;background:var(--navy);position:relative;overflow:hidden}
+.pillars::before{content:'';position:absolute;bottom:-200px;left:-200px;width:500px;height:500px;background:radial-gradient(circle,rgba(196,30,42,.08) 0%,transparent 70%);border-radius:50%}
+.pillars::after{content:'';position:absolute;top:-150px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,.02) 0%,transparent 70%);border-radius:50%}
+.pillars .section-label{color:var(--red-light)}
+.pillars .section-title{color:var(--white)}
+.pillars .section-desc{color:rgba(255,255,255,.45)}
+.pillars-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;position:relative;z-index:2}
+.pillar{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:2.5rem 2rem 2rem;transition:all .5s;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.pillar::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .5s}
+.pillar:hover{transform:translateY(-10px);background:rgba(255,255,255,.07);border-color:rgba(196,30,42,.25);box-shadow:0 30px 60px rgba(0,0,0,.3)}
+.pillar:hover::before{transform:scaleX(1)}
+.pillar.featured{background:rgba(196,30,42,.08);border-color:rgba(196,30,42,.2);transform:scale(1.03)}
+.pillar.featured::before{transform:scaleX(1);background:linear-gradient(90deg,var(--red),var(--red-light))}
+.pillar.featured:hover{transform:scale(1.03) translateY(-10px)}
+.pillar-badge{position:absolute;top:1.2rem;right:1.2rem;background:var(--red);color:var(--white);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.68rem;text-transform:uppercase;letter-spacing:1.5px;padding:.25rem .7rem;border-radius:2px}
+.pillar-icon{width:80px;height:80px;margin-bottom:1.5rem;background:rgba(255,255,255,.05);border-radius:50%;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.08);transition:all .4s}
+.pillar:hover .pillar-icon{background:rgba(196,30,42,.15);border-color:rgba(196,30,42,.3)}
+.pillar-icon svg{width:36px;height:36px;stroke:var(--red);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.pillar h3{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.35rem;color:var(--white);text-transform:uppercase;letter-spacing:1px;line-height:1.2;margin-bottom:.4rem}
+.pillar .pillar-sub{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:.82rem;color:var(--red-light);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:1rem}
+.pillar .pillar-desc{color:rgba(255,255,255,.5);font-size:.92rem;line-height:1.65;margin-bottom:1.5rem}
+.pillar-features{list-style:none;margin-bottom:1.8rem;flex:1}
+.pillar-features li{display:flex;align-items:flex-start;gap:.6rem;padding:.45rem 0;color:rgba(255,255,255,.55);font-size:.88rem;line-height:1.5;border-bottom:1px solid rgba(255,255,255,.04)}
+.pillar-features li:last-child{border-bottom:none}
+.pillar-features li svg{width:16px;height:16px;stroke:var(--red);fill:none;stroke-width:2.5;flex-shrink:0;margin-top:2px}
+.pillar-cta{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.8rem;border-radius:4px;font-family:'Oswald',sans-serif;font-weight:600;font-size:.95rem;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all .3s;cursor:pointer;border:none;text-align:center;justify-content:center;width:100%}
+.pillar-cta.cta-outline{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.15)}
+.pillar-cta.cta-outline:hover{border-color:var(--red);color:var(--red);background:rgba(196,30,42,.05)}
+.pillar-cta.cta-filled{background:var(--red);color:var(--white)}
+.pillar-cta.cta-filled:hover{background:var(--red-light);transform:translateY(-2px);box-shadow:0 8px 25px rgba(196,30,42,.4)}
+.pillar-cta svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.5}
+
 /* SERVICES */
 .services{padding:6rem 2rem;background:var(--off-white);position:relative}
 .services::before{content:'';position:absolute;top:0;left:0;width:100%;height:5px;background:linear-gradient(90deg,var(--red),var(--navy))}
@@ -183,7 +216,7 @@ footer p{color:rgba(255,255,255,.35);font-size:.82rem}
 .reveal{opacity:0;transform:translateY(35px);transition:all .7s cubic-bezier(.16,1,.3,1)}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
-@media(max-width:1000px){.services-grid{grid-template-columns:repeat(2,1fr)}.shop-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1000px){.services-grid{grid-template-columns:repeat(2,1fr)}.shop-grid{grid-template-columns:repeat(2,1fr)}.pillars-grid{grid-template-columns:1fr}.pillar.featured{transform:none}.pillar.featured:hover{transform:translateY(-10px)}}
 @media(max-width:900px){
   .nav-links{display:none}.hamburger{display:flex}.mobile-menu{display:flex}
   .about-grid{grid-template-columns:1fr}.contact-wrapper{grid-template-columns:1fr;gap:2rem}
@@ -201,8 +234,9 @@ footer p{color:rgba(255,255,255,.35);font-size:.82rem}
 <nav id="nav"><div class="nav-inner">
   <a href="#" class="nav-logo"><img src="https://files.catbox.moe/5y4zhm.png" alt="Solid Cars"><span>Solid Cars</span></a>
   <ul class="nav-links">
+    <li><a href="#oferta">Oferta</a></li>
     <li><a href="#uslugi">Usługi</a></li>
-    <li><a href="#oferty">Oferty aut</a></li>
+    <li><a href="#oferty">Samochody</a></li>
     <li><a href="#o-nas">Dlaczego my</a></li>
     <li><a href="#jak-dzialamy">Jak działamy</a></li>
     <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
@@ -211,8 +245,9 @@ footer p{color:rgba(255,255,255,.35);font-size:.82rem}
 </div></nav>
 
 <div class="mobile-menu" id="mobileMenu">
+  <a href="#oferta" onclick="toggleMenu()">Oferta</a>
   <a href="#uslugi" onclick="toggleMenu()">Usługi</a>
-  <a href="#oferty" onclick="toggleMenu()">Oferty aut</a>
+  <a href="#oferty" onclick="toggleMenu()">Samochody</a>
   <a href="#o-nas" onclick="toggleMenu()">Dlaczego my</a>
   <a href="#jak-dzialamy" onclick="toggleMenu()">Jak działamy</a>
   <a href="#kontakt" onclick="toggleMenu()">Kontakt</a>
@@ -231,6 +266,75 @@ footer p{color:rgba(255,255,255,.35);font-size:.82rem}
       <div class="si"><div class="num">Firmy i klienci indywidualni</div><div class="txt">Obsługujemy B2B oraz zlecenia prywatne</div></div>
       <div class="si"><div class="num">Wszystko w jednym miejscu</div><div class="txt">Jeden kontakt — zero biegania po urzędach</div></div>
     </div>
+  </div>
+</section>
+
+<!-- 3 FILARY OFERTY -->
+<section class="pillars" id="oferta">
+  <div class="section-header reveal">
+    <div class="section-label">Co oferujemy</div>
+    <h2 class="section-title" style="color:var(--white)">Trzy filary<br>Solid Cars</h2>
+    <p class="section-desc" style="color:rgba(255,255,255,.45)">Niezależnie od tego, czy szukasz auta, potrzebujesz opieki nad flotą, czy chcesz kupić sprawdzony samochód — mamy dla Ciebie rozwiązanie.</p>
+  </div>
+
+  <div class="pillars-grid">
+
+    <!-- PILLAR 1: Znajdź i zweryfikuj -->
+    <div class="pillar reveal">
+      <div class="pillar-icon">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M8 11h6"/><path d="M11 8v6"/></svg>
+      </div>
+      <h3>Znajdź i zweryfikuj samochód</h3>
+      <div class="pillar-sub">Pakiet jednorazowy</div>
+      <p class="pillar-desc">Szukasz auta i nie chcesz kupić kota w worku? Znajdziemy, sprawdzimy i dostarczymy Ci samochód — bez ryzyka i ukrytych wad.</p>
+      <ul class="pillar-features">
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Wyszukanie auta wg Twoich kryteriów</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Weryfikacja historii i stanu technicznego</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Oględziny + jazda próbna</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Negocjacja ceny w Twoim imieniu</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Obsługa formalno-prawna zakupu</li>
+      </ul>
+      <a href="#kontakt" class="pillar-cta cta-outline">Zapytaj o wycenę <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+    </div>
+
+    <!-- PILLAR 2: Abonament flotowy (FEATURED) -->
+    <div class="pillar featured reveal">
+      <div class="pillar-badge">Najpopularniejszy</div>
+      <div class="pillar-icon">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/></svg>
+      </div>
+      <h3>Abonament obsługi floty</h3>
+      <div class="pillar-sub">Miesięczna subskrypcja</div>
+      <p class="pillar-desc">Pełen outsourcing flotowy w formie wygodnego abonamentu. Ty prowadzisz biznes — my pilnujemy każdego auta w Twojej firmie.</p>
+      <ul class="pillar-features">
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Koordynacja serwisów i przeglądów</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Obsługa ubezpieczeń i leasingów</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Zarządzanie kosztami i raportowanie</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Dedykowany opiekun floty</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Pomoc 24/7 przy awariach</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Indywidualna wycena wg wielkości floty</li>
+      </ul>
+      <a href="#kontakt" class="pillar-cta cta-filled">Zamów abonament <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+    </div>
+
+    <!-- PILLAR 3: Sklep z samochodami -->
+    <div class="pillar reveal">
+      <div class="pillar-icon">
+        <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      </div>
+      <h3>Sklep z samochodami</h3>
+      <div class="pillar-sub">Sprawdzone auta na sprzedaż</div>
+      <p class="pillar-desc">Przeglądaj naszą ofertę aut używanych — każde zweryfikowane, z pełną historią i gwarancją Solid Cars.</p>
+      <ul class="pillar-features">
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Auta osobowe, SUV-y i dostawcze</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Pełna weryfikacja techniczna i prawna</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Gwarancja Solid Cars na każdy pojazd</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Pomoc w finansowaniu i leasingu</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Dostawa pod wskazany adres</li>
+      </ul>
+      <a href="#oferty" class="pillar-cta cta-outline">Zobacz ofertę aut <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+    </div>
+
   </div>
 </section>
 
