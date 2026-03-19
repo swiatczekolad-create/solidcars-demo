@@ -126,41 +126,7 @@ nav.scrolled{background:rgba(11,25,41,.97);backdrop-filter:blur(12px);padding:.6
 .about-card h4{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.05rem;color:var(--white);text-transform:uppercase;letter-spacing:.5px;margin-bottom:.4rem}
 .about-card p{color:rgba(255,255,255,.45);font-size:.9rem;line-height:1.6}
 
-/* SHOP / OFERTY */
-.shop{padding:6rem 2rem;background:var(--white);position:relative}
-.shop::before{content:'';position:absolute;top:0;left:0;width:100%;height:5px;background:linear-gradient(90deg,var(--navy),var(--red))}
-.shop-filters{max-width:1100px;margin:0 auto 2.5rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
-.shop-filter{padding:.55rem 1.4rem;border:1.5px solid var(--gray-100);border-radius:3px;background:var(--white);font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:.85rem;color:var(--gray-600);text-transform:uppercase;letter-spacing:1px;cursor:pointer;transition:all .3s}
-.shop-filter:hover{border-color:var(--navy);color:var(--navy)}
-.shop-filter.active{background:var(--navy);color:var(--white);border-color:var(--navy)}
-.shop-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem}
-.car-card{background:var(--white);border-radius:8px;border:1px solid var(--gray-100);overflow:hidden;transition:all .4s;position:relative}
-.car-card:hover{transform:translateY(-8px);box-shadow:0 24px 60px rgba(11,25,41,.14);border-color:transparent}
-.car-card .car-badge{position:absolute;top:1rem;left:1rem;background:var(--red);color:var(--white);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.75rem;text-transform:uppercase;letter-spacing:1.5px;padding:.3rem .8rem;border-radius:2px;z-index:3}
-.car-card .car-badge.sold{background:var(--gray-600)}
-.car-img{width:100%;height:210px;background:var(--navy-mid);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.car-img svg{width:64px;height:64px;stroke:rgba(255,255,255,.15);fill:none;stroke-width:1.2}
-.car-img::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:60px;background:linear-gradient(transparent,rgba(11,25,41,.6))}
-.car-body{padding:1.5rem}
-.car-meta{display:flex;gap:.6rem;margin-bottom:.8rem;flex-wrap:wrap}
-.car-tag{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:.72rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:.8px;background:var(--off-white);padding:.2rem .6rem;border-radius:2px}
-.car-card h3{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.15rem;color:var(--navy);text-transform:uppercase;letter-spacing:.5px;line-height:1.25;margin-bottom:.2rem}
-.car-card .car-sub{font-size:.88rem;color:var(--gray-600);margin-bottom:1rem;line-height:1.5}
-.car-specs{display:grid;grid-template-columns:1fr 1fr;gap:.4rem .8rem;margin-bottom:1.2rem;padding-top:1rem;border-top:1px solid var(--gray-100)}
-.car-spec{display:flex;align-items:center;gap:.4rem}
-.car-spec svg{width:15px;height:15px;stroke:var(--red);fill:none;stroke-width:2;flex-shrink:0}
-.car-spec span{font-size:.82rem;color:var(--gray-600)}
-.car-footer{display:flex;justify-content:space-between;align-items:center}
-.car-price{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.4rem;color:var(--navy)}
-.car-price small{display:block;font-family:'Barlow',sans-serif;font-weight:400;font-size:.7rem;color:var(--gray-400);letter-spacing:.5px}
-.car-btn{background:var(--navy);color:var(--white);padding:.6rem 1.3rem;border:none;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-flex;align-items:center;gap:.4rem}
-.car-btn:hover{background:var(--red);transform:translateY(-2px);box-shadow:0 6px 20px rgba(196,30,42,.3)}
-.car-btn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}
-.shop-more{text-align:center;margin-top:3rem}
-.shop-more a{display:inline-flex;align-items:center;gap:.5rem;font-family:'Oswald',sans-serif;font-weight:600;font-size:1.05rem;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:.3rem;transition:all .3s}
-.shop-more a:hover{color:var(--red);gap:.8rem}
-.shop-more a svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.5;transition:transform .3s}
-.shop-more a:hover svg{transform:translateX(4px)}
+
 
 /* PROCESS */
 .process{padding:6rem 2rem;background:var(--off-white)}
@@ -216,14 +182,14 @@ footer p{color:rgba(255,255,255,.35);font-size:.82rem}
 .reveal{opacity:0;transform:translateY(35px);transition:all .7s cubic-bezier(.16,1,.3,1)}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
-@media(max-width:1000px){.services-grid{grid-template-columns:repeat(2,1fr)}.shop-grid{grid-template-columns:repeat(2,1fr)}.pillars-grid{grid-template-columns:1fr}.pillar.featured{transform:none}.pillar.featured:hover{transform:translateY(-10px)}}
+@media(max-width:1000px){.services-grid{grid-template-columns:repeat(2,1fr)}.pillars-grid{grid-template-columns:1fr}.pillar.featured{transform:none}.pillar.featured:hover{transform:translateY(-10px)}}
 @media(max-width:900px){
   .nav-links{display:none}.hamburger{display:flex}.mobile-menu{display:flex}
   .about-grid{grid-template-columns:1fr}.contact-wrapper{grid-template-columns:1fr;gap:2rem}
   .mission-inner{flex-direction:column;text-align:center}
 }
 @media(max-width:600px){
-  .services-grid{grid-template-columns:1fr}.shop-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}
   .stats-strip{flex-direction:column;gap:1rem}
   .stats-strip .si+.si{border-left:none;border-top:1px solid rgba(255,255,255,.08);padding-top:1rem}
 }
@@ -236,7 +202,6 @@ footer p{color:rgba(255,255,255,.35);font-size:.82rem}
   <ul class="nav-links">
     <li><a href="#oferta">Oferta</a></li>
     <li><a href="#uslugi">Usługi</a></li>
-    <li><a href="#oferty">Samochody</a></li>
     <li><a href="#o-nas">Dlaczego my</a></li>
     <li><a href="#jak-dzialamy">Jak działamy</a></li>
     <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
@@ -247,7 +212,6 @@ footer p{color:rgba(255,255,255,.35);font-size:.82rem}
 <div class="mobile-menu" id="mobileMenu">
   <a href="#oferta" onclick="toggleMenu()">Oferta</a>
   <a href="#uslugi" onclick="toggleMenu()">Usługi</a>
-  <a href="#oferty" onclick="toggleMenu()">Samochody</a>
   <a href="#o-nas" onclick="toggleMenu()">Dlaczego my</a>
   <a href="#jak-dzialamy" onclick="toggleMenu()">Jak działamy</a>
   <a href="#kontakt" onclick="toggleMenu()">Kontakt</a>
@@ -381,155 +345,6 @@ footer p{color:rgba(255,255,255,.35);font-size:.82rem}
 </section>
 
 <!-- WHY US -->
-
-<!-- SHOP / OFERTY AUT -->
-<section class="shop" id="oferty">
-  <div class="section-header reveal">
-    <div class="section-label">Oferty aut</div>
-    <h2 class="section-title">Sprawdzone auta<br>w atrakcyjnych cenach</h2>
-    <p class="section-desc">Każdy pojazd przechodzi pełną weryfikację techniczną i prawną. Kupujesz bezpiecznie — z gwarancją Solid Cars.</p>
-  </div>
-
-  <div class="shop-filters reveal">
-    <button class="shop-filter active" onclick="filterCars('all',this)">Wszystkie</button>
-    <button class="shop-filter" onclick="filterCars('osobowe',this)">Osobowe</button>
-    <button class="shop-filter" onclick="filterCars('suv',this)">SUV / Crossover</button>
-    <button class="shop-filter" onclick="filterCars('dostawcze',this)">Dostawcze</button>
-  </div>
-
-  <div class="shop-grid" id="shopGrid">
-
-    <!-- Car 1 -->
-    <div class="car-card reveal" data-cat="osobowe">
-      <div class="car-badge">Nowość</div>
-      <div class="car-img"><img src="https://files.catbox.moe/kuvnh4.jpg" alt="Volkswagen Passat B8" style="width:100%;height:100%;object-fit:cover"></div>
-      <div class="car-body">
-        <div class="car-meta"><span class="car-tag">2021</span><span class="car-tag">Benzyna</span><span class="car-tag">Automat</span></div>
-        <h3>Volkswagen Passat B8</h3>
-        <p class="car-sub">Variant 2.0 TSI, 190 KM, bogata wersja Business</p>
-        <div class="car-specs">
-          <div class="car-spec"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg><span>78 000 km</span></div>
-          <div class="car-spec"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>190 KM</span></div>
-          <div class="car-spec"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/></svg><span>Gdynia</span></div>
-          <div class="car-spec"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Gwarancja</span></div>
-        </div>
-        <div class="car-footer">
-          <div class="car-price">109 900 zł<small>Netto + VAT</small></div>
-          <a href="#kontakt" class="car-btn">Szczegóły <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Car 2 -->
-    <div class="car-card reveal" data-cat="suv">
-      <div class="car-badge">Polecamy</div>
-      <div class="car-img"><img src="https://files.catbox.moe/oaodyb.jpg" alt="Škoda Kodiaq" style="width:100%;height:100%;object-fit:cover"></div>
-      <div class="car-body">
-        <div class="car-meta"><span class="car-tag">2022</span><span class="car-tag">Diesel</span><span class="car-tag">4x4</span></div>
-        <h3>Škoda Kodiaq</h3>
-        <p class="car-sub">2.0 TDI, 200 KM, 7 miejsc, Sportline, panorama</p>
-        <div class="car-specs">
-          <div class="car-spec"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg><span>42 000 km</span></div>
-          <div class="car-spec"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>200 KM</span></div>
-          <div class="car-spec"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/></svg><span>Gdynia</span></div>
-          <div class="car-spec"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Gwarancja</span></div>
-        </div>
-        <div class="car-footer">
-          <div class="car-price">159 900 zł<small>Netto + VAT</small></div>
-          <a href="#kontakt" class="car-btn">Szczegóły <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Car 3 -->
-    <div class="car-card reveal" data-cat="dostawcze">
-      <div class="car-img"><img src="https://files.catbox.moe/nex0ou.jpg" alt="Ford Transit Custom" style="width:100%;height:100%;object-fit:cover"></div>
-      <div class="car-body">
-        <div class="car-meta"><span class="car-tag">2020</span><span class="car-tag">Diesel</span><span class="car-tag">Furgon</span></div>
-        <h3>Ford Transit Custom</h3>
-        <p class="car-sub">2.0 EcoBlue, 170 KM, L2H1, klima, tempomat</p>
-        <div class="car-specs">
-          <div class="car-spec"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg><span>95 000 km</span></div>
-          <div class="car-spec"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>170 KM</span></div>
-          <div class="car-spec"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/></svg><span>Gdynia</span></div>
-          <div class="car-spec"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Gwarancja</span></div>
-        </div>
-        <div class="car-footer">
-          <div class="car-price">89 900 zł<small>Netto + VAT</small></div>
-          <a href="#kontakt" class="car-btn">Szczegóły <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Car 4 -->
-    <div class="car-card reveal" data-cat="osobowe">
-      <div class="car-img"><img src="https://files.catbox.moe/0us2qm.jpg" alt="Toyota Corolla" style="width:100%;height:100%;object-fit:cover"></div>
-      <div class="car-body">
-        <div class="car-meta"><span class="car-tag">2023</span><span class="car-tag">Hybryda</span><span class="car-tag">Automat</span></div>
-        <h3>Toyota Corolla</h3>
-        <p class="car-sub">1.8 Hybrid, 140 KM, Comfort, pakiet Tech</p>
-        <div class="car-specs">
-          <div class="car-spec"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg><span>24 000 km</span></div>
-          <div class="car-spec"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>140 KM</span></div>
-          <div class="car-spec"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/></svg><span>Gdynia</span></div>
-          <div class="car-spec"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Gwarancja</span></div>
-        </div>
-        <div class="car-footer">
-          <div class="car-price">98 500 zł<small>Netto + VAT</small></div>
-          <a href="#kontakt" class="car-btn">Szczegóły <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Car 5 -->
-    <div class="car-card reveal" data-cat="suv">
-      <div class="car-badge">Okazja</div>
-      <div class="car-img"><img src="https://files.catbox.moe/985x8t.jpg" alt="Hyundai Tucson" style="width:100%;height:100%;object-fit:cover"></div>
-      <div class="car-body">
-        <div class="car-meta"><span class="car-tag">2021</span><span class="car-tag">Benzyna</span><span class="car-tag">4x4</span></div>
-        <h3>Hyundai Tucson</h3>
-        <p class="car-sub">1.6 T-GDI, 230 KM, HEV, Premium, skóra, LED</p>
-        <div class="car-specs">
-          <div class="car-spec"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg><span>55 000 km</span></div>
-          <div class="car-spec"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>230 KM</span></div>
-          <div class="car-spec"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/></svg><span>Gdynia</span></div>
-          <div class="car-spec"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Gwarancja</span></div>
-        </div>
-        <div class="car-footer">
-          <div class="car-price">129 000 zł<small>Netto + VAT</small></div>
-          <a href="#kontakt" class="car-btn">Szczegóły <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Car 6 -->
-    <div class="car-card reveal" data-cat="dostawcze">
-      <div class="car-img"><img src="https://files.catbox.moe/8f6u0x.jpg" alt="Renault Master" style="width:100%;height:100%;object-fit:cover"></div>
-      <div class="car-body">
-        <div class="car-meta"><span class="car-tag">2022</span><span class="car-tag">Diesel</span><span class="car-tag">Chłodnia</span></div>
-        <h3>Renault Master</h3>
-        <p class="car-sub">2.3 dCi, 150 KM, zabudowa chłodnicza, idealny do transportu</p>
-        <div class="car-specs">
-          <div class="car-spec"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg><span>67 000 km</span></div>
-          <div class="car-spec"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>150 KM</span></div>
-          <div class="car-spec"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/></svg><span>Gdynia</span></div>
-          <div class="car-spec"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Gwarancja</span></div>
-        </div>
-        <div class="car-footer">
-          <div class="car-price">119 000 zł<small>Netto + VAT</small></div>
-          <a href="#kontakt" class="car-btn">Szczegóły <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="shop-more reveal">
-    <a href="https://1szsj.example.com" target="_blank">Zobacz pełną ofertę w sklepie <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
-  </div>
-</section>
-
-<!-- WHY US -->
 <section class="about" id="o-nas">
   <div class="section-header reveal">
     <div class="section-label">Dlaczego my</div>
@@ -596,7 +411,6 @@ function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('ac
 const observer=new IntersectionObserver(e=>{e.forEach((el,i)=>{if(el.isIntersecting){setTimeout(()=>el.target.classList.add('visible'),i*80);observer.unobserve(el.target)}})},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 function handleSubmit(){const r=document.querySelectorAll('.form-card input[required]');let ok=true;r.forEach(i=>{if(!i.value.trim()){i.style.borderColor='#C41E2A';ok=false}else i.style.borderColor=''});if(ok)alert('Dziękujemy za wiadomość! Skontaktujemy się wkrótce.')}
-function filterCars(cat,btn){document.querySelectorAll('.shop-filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.car-card').forEach(c=>{if(cat==='all'||c.dataset.cat===cat){c.style.display='';c.style.opacity='0';c.style.transform='translateY(20px)';setTimeout(()=>{c.style.transition='all .4s';c.style.opacity='1';c.style.transform='translateY(0)'},50)}else{c.style.opacity='0';c.style.transform='scale(.95)';setTimeout(()=>c.style.display='none',300)}})}
 </script>
 </body>
 </html>
